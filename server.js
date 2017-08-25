@@ -3,7 +3,8 @@
 
     var server = http.createServer(function (req, res) {
       res.writeHead(200, {'Content-Type': 'text/json'});
-      res.end(`{ "title" : "Hello World", "Text" : "This is my first web api" }`);
+      res.write(`{ "title" : "Hello World", "Text" : "This is my first web api" }`);
+      res.end();
     });
 
     // server.listen(3000); //
